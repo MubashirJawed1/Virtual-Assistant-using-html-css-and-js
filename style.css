@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+    color: white;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.d-none{
+    display: none;
+}
+
+
+.mask-img {
+    -webkit-mask-image: linear-gradient(to bottom, #000000 67%, transparent 98%);
+    mask-image: linear-gradient(to bottom, #000000 67%, transparent 98%)
+}
+
+:root {
+    --background-color: black;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-color);
+}
+
+
+.text-container {
+  width: 100%;
+
+}
+
+.text-container .text {
+display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 49%;
+    height: 100%;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: auto;
+}
+
+.text-container .text .hold-txt {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 1s ease-in-out;
+    font-family: "Dancing Script", cursive;
+    font-weight: 900;
+    font-size: 2.7rem;
+
+}
+
+.text-container .text .hold-txt p {
+    color: #ff4507;
+    font-family: "Dancing Script", cursive;
+    font-weight: 900;
+    
+}
+
+.text-container .text span {
+    position: relative;
+    margin-left: 12px;
+
+}
+
+.text-container .text span::before {
+    content: "Virtual Assistant.";
+    color: #02f5ff;
+    animation: words 20s infinite;
+
+}
+
+
+.text-container .text span::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 2px solid #02f5ff;;
+    background-color: var(--background-color);
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(20) infinite;
+
+}
+
+@keyframes cursor {
+    to {
+        border-left: 2px solid black;
+    }
+}
+
+@keyframes words {
+
+    0%,
+    20% {
+        content: "Virtual Assistant.";
+    }
+
+    21%,
+    40% {
+        content: "Helper.";
+    }
+
+    41%,
+    60% {
+        content: "Companion.";
+    }
+
+    61%,
+    80% {
+        content: "Manager.";
+    }
+
+    81%,
+    100% {
+        content: "Genie.";
+    }
+
+
+}
+
+@keyframes typing {
+
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+        width: 0;
+    }
+
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85%,
+    100% {
+        width: calc(100% + 8px);
+    }
+}
+
+/* main section */
+
+main{
+    width: 100%;
+   
+    
+}
+main .ai-img{
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+}
+main .ai-img video{
+    width: 370px;
+    height: 340px;
+}
+
+.voice-container{
+  width: 100%;
+  height: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.animation{
+   display: none;
+}
+.animation video{
+    width: 150px;
+
+}
+
+.btn-mic{
+    width: 341px;
+    height: 45px;
+    border: 1px solid #ff00009c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(45deg, #ff2828a8, #b84a94f2, #07d0cf);
+    border-radius: 30px;
+    font-size: 1.3rem;
+    font-weight: 600;
+   transition: all 366ms ease-in-out;
+   margin-bottom:19px ;
+   margin-top:10px ;
+}
+
+.btn-mic:hover{
+    background: linear-gradient(45deg, #ff2828, #e926a8, #14ffff);
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+}
+footer p{
+    font-size: 12px;
+}
+
+@media only screen and (max-width:900px){
+    main .ai-img {
+        padding: 30px;
+    }
+    main .ai-img video {
+        width: 370px;
+        height: 246px;
+    }
+    .text-container .text {
+        width: 100%;
+    }
+
+}
+@media only screen and (max-width:600px){
+ 
+    .text-container .text {
+       font-size: 2rem;
+    }
+
+}
+@media only screen and (max-width:440px){
+    .text-container .text .hold-txt {
+        font-size: 2.5rem;
+    }
+    .text-container .text {
+        font-size: 1.7rem;
+    }
+    
+
+}
+@media only screen and (max-width:370px){
+    .text-container .text .hold-txt {
+        font-size: 2.3rem;
+    }
+    .text-container .text {
+        font-size: 1.5rem;
+    }
+    .btn-mic {
+        width: 312px;
+        font-size: 1.1rem;
+    }
+    footer p{
+        font-size: 11px;
+    }
+    
+
+}
+@media only screen and (max-width:330px){
+    .text-container .text .hold-txt {
+        font-size: 2.1rem;
+    }
+    .text-container .text {
+        font-size: 1.5rem;
+    }
+    .btn-mic {
+        width: 279px;
+        font-size: 1rem;
+    }
+
+    .btn-mic svg {
+        width: 24px;
+    }
+    footer p{
+        font-size: 10px;
+    }
+    
+
+}
+@media only screen and (max-width:270px){
+    main .ai-img video {
+        width: 237px;
+        height: 265px;
+    }
+    .text-container .text .hold-txt {
+        font-size: 1.8rem;
+    }
+    .text-container .text {
+        font-size: 1rem;
+    }
+    .btn-mic {
+        width: 232px;
+        font-size: 14px;
+        gap: 6px;
+    }
+
+    .btn-mic svg {
+        width: 22px;
+    }
+    footer p{
+        font-size: 8px;
+    }
+    
+
+}
